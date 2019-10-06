@@ -1,89 +1,45 @@
 ﻿using System.Collections.Generic;
+using System;
+using csharpcore.Items;
 
 namespace csharpcore
 {
     public class GildedRose
     {
         IList<Item> Items;
+
+        IList<RegularItem> RegularItems = new List<RegularItem>();
+        IList<AgedItem> AgedItems = new List<AgedItem>();
+        IList<SulfurasItem> SulfurasItems = new List<SulfurasItem>();
+        IList<BackstagePassItem> BackstagePassItems = new List<BackstagePassItem>();
+        IList<ConjuredItem> ConjuredItems = new List<ConjuredItem>();
+
         public GildedRose(IList<Item> Items)
         {
             this.Items = Items;
+
+            foreach (Item item in this.Items)
+            {
+                if (item.Name.Contains(AgedItem.KeyWord))
+                    AgedItems.Add(new AgedItem(item));
+                else if (item.Name.Contains(SulfurasItem.KeyWord))
+                    SulfurasItems.Add(new SulfurasItem(item));
+                else if (item.Name.Contains(BackstagePassItem.KeyWord))
+                    BackstagePassItems.Add(new BackstagePassItem(item));
+                else if (item.Name.Contains(ConjuredItem.KeyWord))
+                    ConjuredItems.Add(new ConjuredItem(item));
+                else
+                    RegularItems.Add(new RegularItem(item));
+            }
         }
 
         public void UpdateQuality()
         {
-            for (var i = 0; i < Items.Count; i++)
-            {
-                if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
-                {
-                    if (Items[i].Quality > 0)
-                    {
-                        if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                        {
-                            Items[i].Quality = Items[i].Quality - 1;
-                        }
-                    }
-                }
-                else
-                {
-                    if (Items[i].Quality < 50)
-                    {
-                        Items[i].Quality = Items[i].Quality + 1;
-
-                        if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
-                        {
-                            if (Items[i].SellIn < 11)
-                            {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
-                            }
-
-                            if (Items[i].SellIn < 6)
-                            {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                {
-                    Items[i].SellIn = Items[i].SellIn - 1;
-                }
-
-                if (Items[i].SellIn < 0)
-                {
-                    if (Items[i].Name != "Aged Brie")
-                    {
-                        if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
-                        {
-                            if (Items[i].Quality > 0)
-                            {
-                                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                                {
-                                    Items[i].Quality = Items[i].Quality - 1;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            Items[i].Quality = Items[i].Quality - Items[i].Quality;
-                        }
-                    }
-                    else
-                    {
-                        if (Items[i].Quality < 50)
-                        {
-                            Items[i].Quality = Items[i].Quality + 1;
-                        }
-                    }
-                }
-            }
+            foreach (RegularItem regularItem in RegularItems) { regularItem.UpdateQuality(); regularItem.UpdateItemValues(); }
+            foreach (AgedItem agedItem in AgedItems) { agedItem.UpdateQuality(); agedItem.UpdateItemValues(); }
+            foreach (SulfurasItem sulfurasItem in SulfurasItems) { sulfurasItem.UpdateQuality(); sulfurasItem.UpdateItemValues(); }
+            foreach (BackstagePassItem backstagePassItem in BackstagePassItems) { backstagePassItem.UpdateQuality(); backstagePassItem.UpdateItemValues(); }
+            foreach (ConjuredItem conjuredItem in ConjuredItems) { conjuredItem.UpdateQuality(); conjuredItem.UpdateItemValues(); }
         }
     }
 }
