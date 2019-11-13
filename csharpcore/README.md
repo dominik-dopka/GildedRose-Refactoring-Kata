@@ -1,9 +1,5 @@
 # Lizard before
 
-
-
-================================================
---------------------------------------------------------------
      NLOC    CCN   token  PARAM  length  location
        9      1     63      0      12 csharp::ApprovalTest::ThirtyDays@15-26@.\ApprovalTest.cs
        4      1     16      1       4 csharp::GildedRose::GildedRose@8-11@.\GildedRose.cs
@@ -12,8 +8,7 @@
        4      1     22      0       4 csharp::Item::ToString@9-12@.\Item.cs
       42      3    260      1      47 csharp::Program::Main@8-54@.\Program.cs
     6 file analyzed.
-==============================================================
---------------------------------------------------------------
+-------------------------------------------------------------------------
     NLOC    Avg.NLOC  AvgCCN  Avg.token  function_cnt    file
      15       0.0     0.0        0.0         0     .\Properties\AssemblyInfo.cs
      24       9.0     1.0       63.0         1     .\ApprovalTest.cs
@@ -21,14 +16,12 @@
      17       7.0     1.0       63.0         1     .\GildedRoseTest.cs
      13       4.0     1.0       22.0         1     .\Item.cs
      50      42.0     3.0      260.0         1     .\Program.cs
-================================================
-------------------------------------------------
+
     !!!! Warnings (cyclomatic_complexity > 15 or length > 1000 or parameter_count > 100) !!!!
     
     NLOC    CCN   token  PARAM  length  location
      71     19    382      0      75 csharp::GildedRose::UpdateQuality@13-87@.\GildedRose.cs
-================================================
-------------------------------------------------------------------------------------------
+
     Total nloc   Avg.NLOC  AvgCCN  Avg.token   Fun Cnt  Warning cnt   Fun Rt   nloc Rt
        202          22.8     4.3      134.3        6         1          0.17    0.52
 
@@ -37,10 +30,6 @@
 
 # Lizard after
 
-
-
-================================================
-------------------------------------------------
       NLOC   CCN   token  PARAM  length  location
        7      1     34      1       8 csharpcore.Items::AgedItem::AgedItem@12-19@.\Items\AgedItem.cs
        9      3     30      1       9 csharpcore.Items::AgedItem::QualityRangeCheck@21-29@.\Items\AgedItem.cs
@@ -72,8 +61,7 @@
       10      1     76      0      14 csharpcore::GildedRoseTest::TestSulfurasItems@117-130@.\GildedRoseTest.cs
       16      3    122      1      19 csharpcore::Program::Main@36-54@.\Program.cs
     12 file analyzed.
-==============================================================
---------------------------------------------------------------
+
     NLOC    Avg.NLOC  AvgCCN  Avg.token  function_cnt    file
      41       7.5     1.8       27.8         4     .\Items\AgedItem.cs
      45       8.5     2.2       33.2         4     .\Items\BackstagePassItem.cs
@@ -88,10 +76,8 @@
       9       0.0     0.0        0.0         0     .\Item.cs
      50      16.0     3.0      122.0         1     .\Program.cs
 
-==============================================================
---------------------------------------------------------------
+
     No thresholds exceeded (cyclomatic_complexity > 15 or length > 1000 or parameter_count > 100)
-==============================================================
-------------------------------------------------------------------------------------------
+
     Total nloc   Avg.NLOC  AvgCCN  Avg.token   Fun Cnt  Warning cnt   Fun Rt   nloc Rt
        415          8.9     1.7       53.2       29         0          0.00      0.00
