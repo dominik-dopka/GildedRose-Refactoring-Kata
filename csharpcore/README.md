@@ -1,4 +1,7 @@
-##Lizard before
+# Lizard before
+
+
+
 ================================================
   NLOC    CCN   token  PARAM  length  location
 ------------------------------------------------
@@ -31,7 +34,12 @@ Total nloc   Avg.NLOC  AvgCCN  Avg.token   Fun Cnt  Warning cnt   Fun Rt   nloc 
        202      22.8     4.3      134.3        6            1      0.17    0.52
 
 
-##Lizard after
+
+
+# Lizard after
+
+
+
 ================================================
   NLOC    CCN   token  PARAM  length  location
 ------------------------------------------------
