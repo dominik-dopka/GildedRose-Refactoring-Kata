@@ -11,7 +11,7 @@
        7      1     63      0       7 csharp::GildedRoseTest::foo@10-16@.\GildedRoseTest.cs
        4      1     22      0       4 csharp::Item::ToString@9-12@.\Item.cs
       42      3    260      1      47 csharp::Program::Main@8-54@.\Program.cs
-6 file analyzed.
+  6 file analyzed.
 ==============================================================
 NLOC    Avg.NLOC  AvgCCN  Avg.token  function_cnt    file
 --------------------------------------------------------------
@@ -22,13 +22,13 @@ NLOC    Avg.NLOC  AvgCCN  Avg.token  function_cnt    file
      13       4.0     1.0       22.0         1     .\Item.cs
      50      42.0     3.0      260.0         1     .\Program.cs
 
-=========================================================================================
+================================================
 !!!! Warnings (cyclomatic_complexity > 15 or length > 1000 or parameter_count > 100) !!!!
 ================================================
   NLOC    CCN   token  PARAM  length  location
 ------------------------------------------------
       71     19    382      0      75 csharp::GildedRose::UpdateQuality@13-87@.\GildedRose.cs
-==========================================================================================
+================================================
 Total nloc   Avg.NLOC  AvgCCN  Avg.token   Fun Cnt  Warning cnt   Fun Rt   nloc Rt
 ------------------------------------------------------------------------------------------
        202      22.8     4.3      134.3        6            1      0.17    0.52
@@ -89,9 +89,9 @@ NLOC    Avg.NLOC  AvgCCN  Avg.token  function_cnt    file
       9       0.0     0.0        0.0         0     .\Item.cs
      50      16.0     3.0      122.0         1     .\Program.cs
 
-=============================================================================================
+==============================================================
 No thresholds exceeded (cyclomatic_complexity > 15 or length > 1000 or parameter_count > 100)
-==========================================================================================
+==============================================================
 Total nloc   Avg.NLOC  AvgCCN  Avg.token   Fun Cnt  Warning cnt   Fun Rt   nloc Rt
 ------------------------------------------------------------------------------------------
        415       8.9     1.7       53.2       29            0      0.00    0.00
